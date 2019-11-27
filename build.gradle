@@ -216,9 +216,9 @@ task checkstyle(type: Checkstyle) {
 */
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.0.0")
+    implementation("androidx.appcompat:appcompat:1.1.0")
     implementation "androidx.cardview:cardview:1.0.0"
-    implementation "androidx.annotation:annotation:1.0.0"
+    implementation "androidx.annotation:annotation:1.1.0"
     implementation "androidx.preference:preference-ktx:1.1.0"
     implementation "com.google.protobuf:protobuf-javalite:$protobuf_version"
     implementation project(':leaflet')

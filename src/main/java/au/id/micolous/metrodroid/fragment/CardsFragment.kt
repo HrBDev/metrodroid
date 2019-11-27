@@ -164,7 +164,7 @@ class CardsFragment : ExpandableListFragment(), SearchView.OnQueryTextListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        registerForContextMenu(listView)
+        listView?.let { registerForContextMenu(it) }
         if (listAdapter == null) {
             loaderManager.initLoader(0, null, mLoaderCallbacks).startLoading()
         }
@@ -188,7 +188,7 @@ class CardsFragment : ExpandableListFragment(), SearchView.OnQueryTextListener {
         searchView.setOnQueryTextListener(this)
     }
 
-    override fun onCreateContextMenu(menu: ContextMenu, view: View, menuInfo: ContextMenu.ContextMenuInfo) {
+    override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo?) {
         activity!!.menuInflater.inflate(R.menu.card_context_menu, menu)
     }
 
